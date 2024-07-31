@@ -75,7 +75,7 @@ def columbus_day(year: int) -> date:
     Second Monday in October
     """
     second_monday = date(year, 9, 1)
-    while (second_monday.weekday() != 1):
+    while (second_monday.weekday() != 0):
         second_monday += timedelta(days = 1)
     second_monday += timedelta(weeks = 1)
     return second_monday
@@ -88,8 +88,10 @@ def thanksgiving(year: int) -> date:
     Last Thursday in November
     """
     last_thu_oct = date(year, 11, 1)
-    while (last_thu_oct != 4):
-        last_thu_oct -= timedelta(days = 1)
+    while last_thu_oct.weekday() != 3:
+        last_thu_oct += timedelta(days = 1)
+    last_thu_oct += timedelta(weeks = 3)
+    print(last_thu_oct)
     return last_thu_oct
 
 def christmas(year: int) -> date:
