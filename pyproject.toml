@@ -1,0 +1,14 @@
+[project]
+name = "what2wear"
+version = "0.1.0"
+description = "Library to decide clothes"
+authors = [{name = "Alexey Shiklomanov", email = "alexey.shiklomanov@gmail.com"}]
+requires-python = ">= 3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
